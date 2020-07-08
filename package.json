@@ -1,0 +1,20 @@
+{
+  "name": "httpmockserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saihe/HttpMockServer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saihe/HttpMockServer/issues"
+  },
+  "homepage": "https://github.com/saihe/HttpMockServer#readme"
+}
