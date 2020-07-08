@@ -4,13 +4,16 @@ const url = require('url');
 
 const server = http.createServer((req, res) => {
     console.log("リクエスト受取");
+    res.setHeader('Access-Controll-Allow-Origin', '*');
+    res.setHeader('Access-Controll-Allow-Methods', '*');
+    res.setHeader('Access-Controll-Allow-Headers', '*');
+    res.setHeader('Access-Control-Request-Method', '*');
     if (req.url === '/favicon.ico') {
         res.writeHead(200, {'Content-Type': 'image/x-icon'} );
         res.end();
     }else{
         const uri = url.parse(req.url).pathname;
         console.log("リクエストURL：" + uri);
-        res.setHeader('Access-Controll-Allow-Origin', '*');
         res.setHeader('Content-Type', 'application/json');
         res.writeHead(200);
         getContent(uri, (err, file) => {
